@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
+    <style type="text/css">
+        body {
+        background: rgb(1, 217, 255);
+        height: 3000px;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        window.onload=function(){
+            setInterval(function(){
+            const scroll = $(window).scrollTop();
+            if (scroll <= 200) {
+                $("body").animate({backgroundColor: 'red'}, 300);
+            }
+            if (scroll >= 201 && scroll <= 400) {
+                $("body").animate({backgroundColor: 'orange'}, 300);
+            }
+            if (scroll >= 401 && scroll <= 800) {
+                $("body").animate({backgroundColor: 'yellow'}, 300);
+            }
+            if (scroll >= 801 && scroll <= 1200) {
+                $("body").animate({backgroundColor: 'green'}, 300);
+            }
+            if (scroll >= 1201 && scroll <= 1600) {
+                $("body").animate({backgroundColor: 'blue'}, 300);
+            }
+            if (scroll >= 1601 && scroll <= 2000){
+                $("body").animate({backgroundColor: '##01d9ff'}, 300);
+            }
+            if (scroll > 2001){
+                $("body").animate({backgroundColor: 'purple'}, 300);
+            }
+            }, 451);
+        }
+        </script>
+</body>
+</html>
